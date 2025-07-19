@@ -12,6 +12,7 @@ abstract class Handler {
 }
 
 class LowLevelHandler extends Handler {
+    @Override
     public void handleRequest(String request) {
         if (request.equals("baixo")) {
             System.out.println("LowLevelHandler lidando com a requisicao.");
@@ -23,6 +24,7 @@ class LowLevelHandler extends Handler {
 
 
 class MediumLevelHandler extends Handler {
+    @Override
     public void handleRequest(String request) {
         if (request.equals("medio")) {
             System.out.println("MediumLevelHandler lidando com a requisicao.");

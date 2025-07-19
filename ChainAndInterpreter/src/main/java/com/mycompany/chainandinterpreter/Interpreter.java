@@ -11,7 +11,8 @@ class TerminalExpression implements Expression {
     public TerminalExpression(String data) {
         this.data = data;
     }
-
+    
+    @Override
     public boolean interpret(String context) {
         return context.contains(data);
     }
@@ -25,7 +26,7 @@ class OrExpression implements Expression {
         this.expr1 = expr1;
         this.expr2 = expr2;
     }
-
+        @Override
     public boolean interpret(String context) {
         return expr1.interpret(context) || expr2.interpret(context);
     }
